@@ -1,5 +1,5 @@
-CREATE DATABASE to_do_list_db;
-USE to_do_list_db;
+CREATE DATABASE to_do_list_database;
+USE to_do_list_database;
 
 CREATE TABLE tasks (
     task_id INT AUTO_INCREMENT PRIMARY KEY,
