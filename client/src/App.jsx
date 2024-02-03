@@ -16,7 +16,6 @@ function App() {
       const res = await fetch(URL);
       const data = await res.json();
       setTasks(data);
-      //return data;
     } catch (err) {
       console.log(err);
     }
@@ -77,7 +76,6 @@ function App() {
         prevTasks.filter((task) => task.task_id !== taskId);
       });
     } catch (err) {
-      console.log(taskId);
       console.log("Error with deleting task", err);
     }
   };

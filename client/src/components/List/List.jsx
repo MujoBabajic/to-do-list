@@ -2,7 +2,6 @@ import React from "react";
 import "./List.css";
 
 const List = ({ tasks, updateTaskCompletion, deleteTask }) => {
-  console.log(tasks);
   return (
     <ul>
       {tasks &&
