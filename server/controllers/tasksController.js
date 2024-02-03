@@ -32,10 +32,11 @@ async function deleteTask(req, res) {
   }
 }
 
-async function updateTaskCompletion() {
+async function updateTaskCompletion(req, res) {
   const { taskId } = req.params;
   const { isCompleted } = req.body;
 
+  console.log(taskId, isCompleted);
   try {
     await tasksModel.updateTaskCompletion(isCompleted, taskId);
     res.sendStatus(201);

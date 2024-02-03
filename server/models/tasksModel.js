@@ -19,10 +19,10 @@ async function getTasks() {
   }
 }
 
-async function updateTaskCompletion(taskId, isCompleted) {
+async function updateTaskCompletion(isCompleted, taskId) {
   try {
     await database.execute(
-      `UPDATE tasks SET is_completed = ? WHERE task_id=?`,
+      `UPDATE tasks SET is_completed = ? WHERE task_id = ?`,
       [isCompleted, taskId]
     );
   } catch (err) {
@@ -32,7 +32,7 @@ async function updateTaskCompletion(taskId, isCompleted) {
 
 async function deleteTask(taskId) {
   try {
-    await database.execute(`DELETE FROM tasks WHERE task_id=?`, [taskId]);
+    await database.execute(`DELETE FROM tasks WHERE task_id = ?`, [taskId]);
   } catch (err) {
     console.log(err);
   }
