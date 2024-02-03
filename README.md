@@ -4,7 +4,7 @@ This project is a simple React To-Do List app created to enhance understanding a
 ## Technologies
 - React
 - MySQL
-- HTML/CSS/JS
+- Express
 
 ## Run Locally
 
